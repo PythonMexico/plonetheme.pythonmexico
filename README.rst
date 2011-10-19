@@ -44,11 +44,11 @@ dropdown.
 Parameters
 ==========
 
-    * ``site-title``, Default: ``string: A HTML5 Hot Pink Theme``
+    * ``site-title``, Default: ``string: Python Mexico``
 
         Site title. 
 
-    * ``site-description``, Default: ``string: This is an awesome HTML5 Hot Pink theme!``
+    * ``site-description``, Default: ``string: Portal de la comunidad de Python Mexico``
 
         Site description.
 
