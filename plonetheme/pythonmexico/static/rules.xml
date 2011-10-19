@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- http://pypi.python.org/pypi/xdv#doctypes 
+         The HTML5 specification lists XHTML 1.0 Strict as as obsolete
+         permitted doctype string, so this doctype is recommended when
+         HTML5 output is desired. -->
+    <xsl:output
+        doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+        doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+
+    <theme href="index.html" />
+
+    <notheme if-content="not(//*[@id='visual-portal-wrapper'])" />
+    <notheme if-path="presentation_view"/>
+
+
+    <!-- head -->
+    <replace content="/html/head/title" theme="/html/head/title" />
+    <replace content="/html/head/base" theme="/html/head/base" />
+    <prepend content="/html/head/meta" theme="/html/head" />
+    <prepend content="/html/head/style" theme="/html/head" />
+    <prepend content="/html/head/link" theme="/html/head" />
+    <prepend content="/html/head/script" theme="/html/head" />
+    <merge attributes="class id" css:content="body" css:theme="body" />
+
+    <!-- header/top -->
+    <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+    <copy attributes="href" css:content="#portal-logo" css:theme="#portal-logo" />
+    <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+    <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
+
+    <!-- content -->
+    <replace css:content="#portal-columns" css:theme="#portal-columns" />
+
+    <!-- footer -->
+    <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
+    <replace css:content="#portal-colophon" css:theme="#portal-colophon" />
+
+    <append css:content="#kss-spinner" css:theme="body" />
+
+</rules>
