@@ -2,7 +2,7 @@
 Python Mexico Theme
 ====================
 
-Installable theme for `Plone`_ (using `plone.app.theming`_).
+Installable `Plone`_ theme for the portal of Python Mexico community (using `plone.app.theming`_).
 
 .. contents::
 
@@ -11,9 +11,10 @@ Installation
 ============
 
 Using buildout
---------------
+---------------
 
 Add ``plonetheme.pythonmexico`` to eggs section of your zope client.::
+
     [instance]
     ...
     eggs =
@@ -22,7 +23,7 @@ Add ``plonetheme.pythonmexico`` to eggs section of your zope client.::
 
 
 Using .zip
-----------
+-----------
 
 ::
 
