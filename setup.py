@@ -3,17 +3,22 @@ from setuptools import find_packages
 
 
 version = '1.0'
-name='plonetheme.pythonmexico'
-
-
+name = 'plonetheme.pythonmexico'
 setup(
-    name=name, version=version,
+    name=name,
+    version=version,
     description="A Plone theme for the portal of Python Mexico community",
     long_description=open("README.rst").read(),
     classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
         "License :: OSI Approved :: BSD License",
+        "Development Status :: 4 - Beta",
+        "Environment :: Web Environment",
+        "Framework :: Zope3",
+        "Intended Audience :: Developers",
+        "Natural Language :: Spanish",
+        "Programming Language :: Zope",
         ],
     keywords='plone diazo theme',
     author='Erik Rivera',
@@ -26,6 +31,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'Products.CMFCore',
         'plone.app.theming',
         ],
     entry_points="""
