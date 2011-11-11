@@ -208,9 +208,9 @@ tfoot th em {
 {
     background: url(../images/python-logo.gif) no-repeat top left;
     width: 215px;
-    height: 63px;
+    height: 71px;
     position: absolute;
-    top: 12px;
+    top: 5px;
     left: -5px;
     text-indent: -9999px;
 }
@@ -590,6 +590,10 @@ h2.slider_title span {
     height: 100%;
     position: relative;
     padding: 55px 10px 350px 10px;
+}
+
+#content {
+    font-size: 100%;
 }
 
 .single_blog_content {

@@ -34,7 +34,7 @@
     <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
 
     <!-- content -->
-    <replace css:content="#portal-columns" css:theme="#portal-columns" />
+    <copy css:content="#portal-columns" css:theme="#main" />
 
     <!-- footer -->
     <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
