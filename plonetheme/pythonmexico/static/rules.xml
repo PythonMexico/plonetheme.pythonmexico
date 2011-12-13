@@ -16,8 +16,18 @@
 
     <notheme if-content="not(//*[@id='visual-portal-wrapper'])" />
     <notheme if-path="presentation_view"/>
-
-
+        
+    <rules css:if-theme="#featured_title" >
+        <append css:content-children=".documentFirstHeading" css:theme="#featured_title>h2" />
+        <drop css:content=".documentFirstHeading" />
+    </rules>
+    
+    <drop css:theme="#featured_title" css:if-content=".carousel" />
+    <drop css:theme="#featured" if-content="not(//*[@class='carousel'])" />
+    
+    <replace css:content='.carousel' css:theme-children='#featured' />
+    <drop css:content="#viewlet-above-content" />
+    
     <!-- head -->
     <replace content="/html/head/title" theme="/html/head/title" />
     <replace content="/html/head/base" theme="/html/head/base" />
@@ -37,8 +47,8 @@
     <copy css:content="#portal-columns" css:theme="#main" />
 
     <!-- footer -->
-    <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
-    <replace css:content="#portal-colophon" css:theme="#portal-colophon" />
+    <replace css:content="#portal-siteactions" css:theme="#siteactions" />
+    <replace css:content="#portal-colophon" css:theme="#colophon" />
 
     <append css:content="#kss-spinner" css:theme="body" />
 

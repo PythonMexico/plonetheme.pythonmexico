@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Python - Home</title>
 	
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/jquery.fancybox-1.3.1.css" type="text/css" media="screen">
-		
+	<link rel="stylesheet" href="css/jquery.twitter.css" type="text/css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
+	
 	<!--[if lte IE 8]>				
 		<link rel="stylesheet" href="css/stylesIE.css" type="text/css" media="screen" />	
 	<![endif]-->
@@ -15,18 +17,73 @@
 		<link rel="stylesheet" href="css/stylesIE7.css" type="text/css" media="screen" />
 	<![endif]-->
 		
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.fancybox-1.3.1.pack.js"></script>
-	<script src="js/jquery.easing-1.3.pack.js"></script>
-	<script src="js/jquery.nivo.slider.pack.js"></script>
-	<script src="js/jquery.tipsy.js"></script>
-	<script src="js/custom.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.twitter.js"></script>
+	<script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
 
 	</head>
 
 		
 	<body class="home">
-		
+	    
+	    <style>
+	    .carousel-text {
+            width: 400px;
+            color: #f1f1f1;
+        }
+
+        #carousel-home {
+            width: 400px;
+        }
+
+        .carousel-text a {
+            color: #fff;
+        }
+	    
+        .carousel-title {
+            color: #fff;
+            font: normal 25px 'Marmelad', 'Trebuchet MS', sans-serif;
+            text-transform: uppercase;
+            /*margin: 0 0 25px 0; */
+              
+        }        
+        
+        .carousel-body {
+            margin: 25px 0 25px 0;   
+            color: #f1f1f1;
+            width: 350px;
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 20px;
+            left: 350px;
+            z-index: 9999;
+        }
+        #featured_title {
+            width: 900px;
+            margin: 0 auto;
+            height: 50px;
+        }
+
+        #featured_title h2 {
+            color: #f1f1f1;
+            font-size:30px;
+        }
+        
+	    </style>
+	    
+	    <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+                        
 	<!-- Header wrap starts here -->
 	<div id="header_wrap">
 		
@@ -34,7 +91,7 @@
 		<div id="header">
 			
 			<!-- Logo -->
-            <h1 class="logo"><a href="#">Python.org.mx</a></h1>
+            <h1 class="logo"><a href="/">Python.org.mx</a></h1>
 			<!-- Logo ends here -->
 			
 	      	 <!-- Navbar -->
@@ -57,6 +114,10 @@
 	<div id="featured_wrap">
 		
 		<!-- Featured area -->
+		<div id="featured_title">
+		    <h2></h2>
+		</div>
+		
 		<div id="featured">
 						
 			<!-- Text area -->
@@ -267,87 +328,70 @@
 		<!-- Footer_wrap starts here -->
 		<div id="footer">
 			
+			<!-- Contact details and map -->
+			<div class="one_third newsletter">
+
+					<h3><a style="color:#fff;" href="http://mx.groups.yahoo.com/group/pythonmexico/">Lista de Correo</a></h3>
+					<p style="display:none;">
+						<b>Publicar mensaje:</b><br />
+                        <a href="mailto:pythonmexico@yahoogrupos.com.mx">pythonmexico@yahoogrupos.com.mx</a><br />
+                        <b>Suscribir:</b><br />
+                        <a href="mailto:pythonmexico-subscribe@yahoogrupos.com.mx">pythonmexico-subscribe@yahoogrupos.com.mx</a><br />
+                        <b>Cancelar suscripción:</b><br />
+                        <a href="mailto:pythonmexico-unsubscribe@yahoogrupos.com.mx">pythonmexico-unsubscribe@yahoogrupos.com.mx</a>
+					</p>
+					<div id="mail"></div>
+					<script type="text/javascript">
+                    $(document).ready(function () {
+                      $('#mail').rssfeed('http://rss.groups.yahoo.com/group/pythonmexico/rss', {
+                        limit: 3
+                      });
+                    });
+                    </script>
+			</div>	
+			<!-- Contact details and map end here -->
+			
+			
 			<!-- Twitter updates -->
 			<div class="one_third twitter">
-				<h3>Twitter</h3>
-				<ul>
-					<li>
-						<p>
-							<span class="answer">@firefly</span> New work in our projects. This isthe Cyber Game Portal for SP-fans. Viewwork you can here: <a href="#">http://tinyurl.com/3ylcpja</a>
-						</p>
-						<p class="twitter_date">20:22 PM Dec 19th via TweetDeck</p>
-					</li>
-					<li>
-						<p>
-							<span class="answer">@just</span> Today, an unusually good day for work. Eat pizza and drink the juice. What are you doing?
-						</p>
-						<p class="twitter_date">09:01 AM Dec 19th via TweetDeck</p>
-					</li>
-					<li>
-						<p>
-							<span class="answer">@smart</span> I thought here, and you know, I think: we are - an impossibility in an impossible universe.
-						</p>
-						<p class="twitter_date">17:16 PM Dec 18th via TweetDeck</p>
-					</li>
-				</ul>
+				<h3><a style="color:#fff;" href="http://twitter.com/pythonmexico">Twitter</a></h3>
+				<script type="text/javascript">
+        			$(document).ready(function() {
+        				$("#twitter").getTwitter({
+        					userName: "pythonmexico",
+        					numTweets: 6,
+        					loaderText: "Cargando tweets...",
+        					slideIn: true,
+        					slideDuration: 500,
+        					showHeading: false,
+        					headingText: "@PythonMexico",
+        					showProfileLink: false,
+        					showTimestamp: true
+        				});
+        			});
+        		</script>
+        		
+				<div id="twitter">
+        			<p><a href="http://twitter.com/pythonmexico">http://twitter.com/pythonmexico</a></p>
+        		</div>
+        		
 			</div>
 			<!-- Twitter updates end here -->
 			
 			<!-- Social links and newsletter -->
-			<div class="one_third">
-			    <div class="social">
-					<h3>Redes Sociales</h3>
-					<div class="social_list">
-						<a href="#" class="tooltip_link" title="delicious"><img src="images/social_media/delicious.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="digg"><img src="images/social_media/digg.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="facebook"><img src="images/social_media/facebook.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="dribble"><img src="images/social_media/dribble.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="flickr"><img src="images/social_media/flickr.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="twitter"><img src="images/social_media/twitter.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="tumblr"><img src="images/social_media/tumblr.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="linkedin"><img src="images/social_media/linkedin.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="forrst"><img src="images/social_media/forrst.png" alt=""></a>
-						<a href="#" class="tooltip_link" title="myspace"><img src="images/social_media/myspace.png" alt=""></a>
-					</div>
-					<p>
-						More info about our works, stuff and our life we found in the social media.
-					</p>
-				</div>
-            
-				<div class="newsletter">
-					<h3>Lista de Correo</h3>
-					<p>
-						Need a hot news about us? It's so fast and simple! Subscribe to our news via e-mail.
-					</p>
-					<form id="newsletter_form" action="#" method="post">
-						<label for="newsletter_email" class="newsletter_form_label">Enter text here</label>
-						<input type="text" name="newsletter_email" id="newsletter_email" class="form_input">
-						<input type="image" src="images/subscribe_button.png" class="newsletter_submit" alt="Subscribe">
-					</form>
-				</div>
-				
+			<div class="one_third last social">
+				<h3><a style="color:#fff;" href="http://facebook.com/PythonMexico">Facebook</a></h3>
+                <div class="fb-like-box" data-href="http://facebook.com/PythonMexico" data-width="300" data-height="390" data-show-faces="true" data-stream="false" data-header="false" data-border-color="#376A94"></div>
 			</div>
-			<!-- Social links and newsletter end here-->
+			<!-- Social links and newsletter end here-->    		
+			<div id="siteactions"></div>
+    		<div id="colophon"></div>
 			
-			<!-- Contact details and map -->
-			<div class="one_third last contact">
-				<h3>Contacto</h3>
-				
-				<ul class="contact_list">
-					<li>54018, London, UK, Baker st., 221b</li>
-					<li>Phone/Fax:<span class="contact_info">+5 800 900 911</span></li>
-					<li>Fax:<span class="contact_info">+5 800 900 911</span></li>
-					<li>E-mail:<span class="contact_info"><a href="mailto:office@mydomain.com" title="[GMCP] Compose a new mail to office@mydomain.com" rel="noreferrer">office@mydomain.com</a></span></li>
-				</ul>
-				
-				
-			</div>	
-			<!-- Contact details and map end here -->
-
 		</div>
-		<!-- Footer ends here -->
+		<!-- Footer ends here -->		
 			
 	</div>
 	<!-- Footer_wrap ends here -->
 			
-<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancy-bg" id="fancy-bg-n"></div><div class="fancy-bg" id="fancy-bg-ne"></div><div class="fancy-bg" id="fancy-bg-e"></div><div class="fancy-bg" id="fancy-bg-se"></div><div class="fancy-bg" id="fancy-bg-s"></div><div class="fancy-bg" id="fancy-bg-sw"></div><div class="fancy-bg" id="fancy-bg-w"></div><div class="fancy-bg" id="fancy-bg-nw"></div><div id="fancybox-inner"></div><a id="fancybox-close"></a><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="crossrider-app-stub529"></div><div style="position:absolute;top:-1000px"></div><div id="shadowMeasureIt"></div><div id="divCoordMeasureIt"></div><div id="divRectangleMeasureIt"><div id="divRectangleBGMeasureIt"></div></div></body></html>
+</body>
+</html>

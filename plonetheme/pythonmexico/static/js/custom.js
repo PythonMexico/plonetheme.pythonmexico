@@ -181,42 +181,4 @@ $(function () {
         });
     });
 
-
-$(window).load(function() { 
-	
-	// check if slider exists		
-	if ($('#featured_slider').length !== 0)	{
-	    $('#featured_slider').nivoSlider();
-	
-	
-		//center slider navigation on the homepage
-		if( $('body').hasClass('home'))
-		{
-			$(".nivo-controlNav").animate({"left": "0px"}, 0);
-			$(".nivo-controlNav").animate({"bottom": "10px"}, 0);
-			var a_count = $(".nivo-controlNav a").size();
-			a_count = parseInt(a_count);
-			a_count = a_count * 28;
-			var width = a_count;
-			var x_pos = ((900 / 2) - (width  / 2)) - 5;
-			
-			$(".nivo-controlNav").animate({"left": x_pos}, 600);
-		}
-		
-		//center slider navigation on other pages
-		else
-		{
-			$(".nivo-controlNav").animate({"left": "0px"}, 0);
-			$(".nivo-controlNav").animate({"bottom": "10px"}, 0);
-			//$(".nivo-controlNav").animate({"opacity": "0"}, 0);
-			
-			var a_count = $(".nivo-controlNav a").size();
-			a_count = parseInt(a_count);
-			a_count = a_count * 28;
-			var width = a_count;
-			var x_pos = ((524 / 2) - (width  / 2)) - 5;
-			$(".nivo-controlNav").animate({"left": x_pos}, 600);		
-		}
-	
-	}
-}); //window load function ends here
+});

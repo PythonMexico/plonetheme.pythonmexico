@@ -1,11 +1,9 @@
-
 /* ========= CSS Reset ========== */
 
 body, h1, h2, h3, h4, h5, h6, a, p, ul, ol, li, em, strong, pre, code, form {
- padding: 0;
- margin: 0;
+    padding: 0;
+    margin: 0;
 }
-
 
 /* ========= GENERAL STYLES ========== */
 
@@ -14,7 +12,7 @@ html, body {
 }
 
 body {
-    font: 12px/18px 'Trebuchet MS', Verdana, Arial, helvetica, sans-serif;
+    font: 13px/20px 'Spinnaker','Trebuchet MS', Helvetica, sans-serif;
     width: 100%;
     overflow-x: hidden;
 }	
@@ -27,13 +25,13 @@ a { color: #2173af; }
 a img {border: none;} 
 
 h1 { 
-    font: bold 28px 'Trebuchet MS', Verdana, Arial, helvetica, sans-serif;
+    font: bold 28px 'Marmelad', 'Trebuchet MS', sans-serif;
     padding: 0 0 30px 0;  
 }
 
 
 h2 { 
-    font: bold 20px 'Trebuchet MS', Verdana, Arial, helvetica, sans-serif;
+    font: bold 20px 'Marmelad', 'Trebuchet MS', sans-serif;
     margin: 25px 0 15px 0; 
 }
 
@@ -41,36 +39,38 @@ h2.subtitle {
     margin: 0;
 }
 
-h2.post_title
-{margin: 0 0 25px 0;}
+h2.post_title {margin: 0 0 25px 0;}
 
-h3 {font-size: 17px;
-margin: 20px 0 10px 0;}
+h3 {
+    font: 17px 'Marmelad', 'Trebuchet MS', sans-serif;
+    margin: 20px 0 10px 0;
+}
 
-h4 {font: bold 14px 'Trebuchet MS', Verdana, Arial, helvetica, sans-serif;
+h4 {font: bold 14px 'Spinnaker','Trebuchet MS', Helvetica, sans-serif;
 padding: 0 0 15px 0; }
 
 h5 {
-font-size: 12px;
-padding: 10px 0 12px 0;	
+    font-size: 12px;
+    padding: 10px 0 12px 0;	
 }
 
-p 
-{font: 12px/18px 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
-margin: 0 0 18px 0;} 
+p {
+    font: 13px/20px 'Spinnaker','Trebuchet MS', Helvetica, sans-serif;
+    margin: 0 0 18px 0;
+} 
 
-blockquote
-{margin: 18px 0 18px 40px;
-padding: 0 0 0 20px;
-border-left: 2px solid #c1c1c1;
-font-style: italic;
-color: #656565;
-font-size: 14px; }
+blockquote {
+    margin: 18px 0 18px 40px;
+    padding: 0 0 0 20px;
+    border-left: 2px solid #c1c1c1;
+    font-style: italic;
+    color: #656565;
+    font-size: 14px; 
+}
 
-span.bigger
-{font-size: 13px;}
-
-
+span.bigger {
+    font-size: 13px;
+}
 
 /* -- Lists -- */
 
@@ -124,7 +124,7 @@ caption {
 		padding:0;
 		caption-side:top;
 		text-align:center;
-	}	
+}	
 	
 tr.odd td	{
 	background:#f7fbff
@@ -240,7 +240,7 @@ tfoot th em {
 
 #navbar li a
 {
-    font-size: 16px;
+    font-size: 18px;
     display: inline-block;
     text-decoration: none;
     color: #376A94;
@@ -447,6 +447,18 @@ tfoot th em {
     height: 295px;
 }
 
+#featured_title {
+    width: 900px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#featured_title h2 {
+    color: #f1f1f1;
+    font-size:30px;
+}
+
+
 .featured_text {
     width: 350px;
     color: #f1f1f1;
@@ -458,7 +470,7 @@ tfoot th em {
 
 #featured h2 {
     color: white;
-    font: normal 20px Verdana, Arial, Helvetica, sans-serif;
+    font: normal 20px 'Marmelad', 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     margin: 0 0 25px 0;
 }
@@ -476,7 +488,7 @@ tfoot th em {
 }
 
 #featured h3 {
-    font: 22px Verdana, Arial, Helvetica, sans-serif;
+    font: 22px 'Marmelad', 'Trebuchet MS', sans-serif;
     width: 500px;
     color: white;
     margin: 20px 0 0 450px; 
@@ -589,7 +601,7 @@ h2.slider_title span {
     overflow: auto;
     height: 100%;
     position: relative;
-    padding: 55px 10px 350px 10px;
+    padding: 10px 10px 350px 10px;
 }
 
 #content {
@@ -625,7 +637,7 @@ h2.slider_title span {
 
 .one_third h3 {
     font-size: 17px;
-    margin: 0 0 25px 0;
+    margin: 0 0 10px 0;
 }
 
 .box {
@@ -1322,6 +1334,44 @@ span.blog_date {
     border: 1px solid #d7d7d7;
 }
 
+#content img.tileImage,
+#content div.newsImageContainer {
+    float: right;
+    margin: 0 0.5em 0.5em 1em;
+}
+
+.collage-item h2 {
+    font-size: 140%;
+    padding: 3px 0 4px 12px;
+    margin:0 0 0 0;
+    text-align: left;
+    z-index: 0;
+    color:#FFFFFF;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:#376A94;
+    border-bottom: 3px solid #FFBC29;    
+}
+
+.collage-item {
+    list-style: none;
+    background: #f7f7f7;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    /*padding: 5px 10px; */
+    min-height:600px;
+}
+
+.collage-item p {
+    padding: 5px 12px;
+}
+
 .widget h3 {
     margin: 5px 0 25px 0;
 }
@@ -1618,8 +1668,8 @@ span#loader {
     border-top: 3px solid #FFBC29;
     width: 100%;
     margin: -300px 0 0 0; /* negative value of footer height */
-    height: 400px;
-    padding: 50px 0 0 0;
+    height: 500px;
+    padding: 20px 0 0 0;
     position: relative;
     clear:both;
     z-index: 999;
@@ -1650,113 +1700,6 @@ body:before {/* thanks to Maleika (Kohoutec)*/
     margin-top: 0;
 }
 
-.twitter ul {
-    list-style: none;
-}
-
-.twitter span.answer {
-    color: #45a4ea;
-	font-weight: bold;
-}
-
-.twitter p.twitter_date {
-    color: #4dcdfd;
-    font-weight: bold;
-    font-size: 11px;
-    margin: -10px 0 18px 0;
-}
-
-.social_list {
-    list-style: none;
-    width: 100%;
-    height: 30px;
-    position: relative;
-}
-
-.social_list a {
-    float: left;
-    position: relative;
-    top: 0px;
-    display: block;
-    padding: 0 0 2px 0;
-    margin: 0 5px 0 0;}
-
-.social_list  a img {
-    border: none;
-}
-
-#newsletter_form {
-    position: relative;
-    width: 225px;
-    height: 26px;
-}
-
-#newsletter_form label {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-}
-
-#newsletter_form input.form_input {
-    width: 225px;
-    height: 15px;
-    padding: 5px 5px 6px;
-    /*background: #0a0a0a;*/
-    border: 1px solid #3e4345;
-    color: #606060;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: white;
-    font-size: 11px;
-    background-color: #093d51;
-    border-color: #2c6b83;
-}
-
-#newsletter_form input.newsletter_submit {
-    font-size: 11px;
-    position: absolute;
-    right: -10px;
-    top: 3px;
-    width: 66px;
-    height: 22px;
-    background: none;
-    padding: 0;
-    border: none;
-}
-
-ul.contact_list {
-    list-style: none;
-    margin: 0 0 20px 0;
-}
-
-.contact_list li {
-    position: relative;
-    margin: 0 0 5px 0;
-}
-
-.contact_list li .contact_info {
-    position: absolute;
-    top:0px;
-    left: 80px;
-}
-
-.map {
-    width: 265px;
-    height: 125px;
-    padding: 5px;
-    background: white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;	
-    margin: 10px 0;
-}
-
-.map iframe {
-    width: 265px;
-    height: 125px;
-    border: none;
-}
 
 /* ============= HIDE CLASS ==============*/
 
