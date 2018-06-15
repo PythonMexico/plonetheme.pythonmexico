@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Added preview file for diazo theme manifest file
+  [macagua]
+
 - Updated diazo theme manifest file
   [macagua]
 
