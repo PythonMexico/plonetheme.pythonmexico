@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Added support for clean uninstallation using GenericSetup profile
+  [macagua]
+
 - Added more strings classifiers items for this packages
   [macagua]
 
