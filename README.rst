@@ -130,6 +130,7 @@ Credits
 
 - `Erik Rivera`_, initial implementation
 - `Noe Nieto`_, fixtures and tunning
+- Leonardo J. Caballero G. (leonardocaballero at gmail dot com).
 
 .. _`Plone`: http://plone.org
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
