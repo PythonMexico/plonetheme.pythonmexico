@@ -8,7 +8,8 @@ setup(
     name=name,
     version=version,
     description="A Plone theme for the portal of Python Mexico community",
-    long_description=open("README.rst").read(),
+    long_description=open("README.rst").read() + "\n" +
+                     open(os.path.join("docs", "CHANGES.rst")).read(),
     classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
