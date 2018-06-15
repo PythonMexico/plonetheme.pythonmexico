@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Updated diazo theme manifest file
+  [macagua]
+
 - Added improvements about README file
   [macagua]
 
