@@ -4,6 +4,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Added a simple Diazo theme package (Zip file)
+  [macagua]
+
 - Added support for clean uninstallation using GenericSetup profile
   [macagua]
 
